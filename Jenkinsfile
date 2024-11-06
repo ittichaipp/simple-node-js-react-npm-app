@@ -7,7 +7,14 @@ pipeline{
                 echo 'Start Executing'
 				script {
                     powershell '''C:\\Tutorial\\testscript\\myscript.ps1'''
-                } 
+                }
+                 script {
+                    powershell '''
+                        Write-Output "Hello World!"
+                        $date = Get-Date
+                        Write-Output "Current Date add time :$date"
+                    '''
+                }
             }
         }
 
